@@ -1,0 +1,46 @@
+class Vehicle {
+    private String brand;
+
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+}
+
+class Car extends Vehicle {
+    private int speed;
+
+    public Car(String brand, int speed) {
+        super(brand);
+        this.speed = speed;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+}
+
+class SportsCar extends Car {
+    private String mode;
+
+    public SportsCar(String brand, int speed, String mode) {
+        super(brand, speed);
+        this.mode = mode;
+    }
+
+    public String getMode() {
+        return mode;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SportsCar myCar = new SportsCar("Ferrari", 200, "Sport");
+        System.out.println("Brand: " + myCar.getBrand());
+        System.out.println("Speed: " + myCar.getSpeed() + " km/h");
+        System.out.println("Mode: " + myCar.getMode());
+    }
+}
