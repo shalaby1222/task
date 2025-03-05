@@ -1,0 +1,27 @@
+interface Car {
+    void drive();
+}
+
+interface ElectricVehicle {
+    void chargeBattery();
+}
+
+class HybridCar implements Car, ElectricVehicle {
+    @Override
+    public void drive() {
+        System.out.println("Hybrid car is driving using both fuel and battery.");
+    }
+
+    @Override
+    public void chargeBattery() {
+        System.out.println("Charging the hybrid car's battery.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HybridCar myCar = new HybridCar();
+        myCar.drive();
+        myCar.chargeBattery();
+    }
+}
